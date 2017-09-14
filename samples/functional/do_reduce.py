@@ -1,8 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+### 用reduce实现List中元素的连乘
 from functools import reduce
+def multi(x,y):
+    return x*y
+def prod(L):
+    return reduce(multi,L)
+print('3 * 5 * 7 * 9 = ',prod([3,5,7,9]))
 
+
+###
+from functools import reduce
 CHAR_TO_INT = {
     '0': 0,
     '1': 1,
