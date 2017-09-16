@@ -48,9 +48,9 @@ CHAR_TO_FLOAT = {
 }
 
 def str2float(s):
-    nums = map(lambda ch: CHAR_TO_FLOAT[ch], s)
+    nums = map(lambda ch: CHAR_TO_FLOAT[ch], s)         #map函数中用 lambda比较简洁
     point = 0
-    def to_float(f, n):
+    def to_float(f, n):         # 在出现小数点后，运算规则发生了变化，用的判断条件 比较巧妙
         nonlocal point
         if n == -1:
             point = 1
@@ -60,7 +60,7 @@ def str2float(s):
         else:
             point = point * 10
             return f + n / point
-    return reduce(to_float, nums, 0.0)
+    return reduce(to_float, nums, 0.0)          # 此处最后一个是 初始参数，有它时nums中的值 只能轮为第二参数
 
 print(str2float('0'))
 print(str2float('123.456'))
