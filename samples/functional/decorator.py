@@ -3,6 +3,7 @@
 
 import functools
 
+# 基本装饰器
 def log(func):
     @functools.wraps(func)
     def wrapper(*args, **kw):
@@ -16,6 +17,7 @@ def now():
 
 now()
 
+# 带参数的装饰器
 def logger(text):
     def decorator(func):
         @functools.wraps(func)
@@ -31,3 +33,15 @@ def today():
 
 today()
 print(today.__name__)
+
+
+# 习题1
+# 在函数调用的前后分别打印'begin call' 与 'end call'
+
+
+
+
+
+
+
+
