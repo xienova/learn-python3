@@ -1,0 +1,21 @@
+
+正常情况下定义了一个class，并创建实例后，动态语言可以为其绑定任意属性与方法。  
+给实例绑定属性 与 方法
+```
+class Student(object):
+    pass
+s= Student()
+s.name = 'zhao'
+print(s.name)
+>zhao
+
+def set_age(self, age):
+    
+
+
+from types import MethodType
+
+
+```
+
+
